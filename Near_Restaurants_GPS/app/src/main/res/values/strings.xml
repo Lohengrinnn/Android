@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Lab_10_Near_Restaurants</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">#############################################</string>
+</resources>
