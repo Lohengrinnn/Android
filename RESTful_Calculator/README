@@ -1,0 +1,18 @@
+Description
+This is a calculator application, include an android app as client and a node.js server, in which android user interface sends operands to the node.js server via RESTful API, and the server return operation result to the client.
+
+Server
+1. Install node.js
+
+2. Install libs
+$ npm i -g npm
+$ npm i --save lodash
+$ npm i --save joi
+
+3. Run RESTAPI on node.js
+$ node index.js
+
+Client
+1. Make sure that change IP to your IP address
+Mac: ifconfig
+Windows: ipconfig
