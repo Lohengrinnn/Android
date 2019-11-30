@@ -10,7 +10,7 @@ $ npm i --save lodash
 $ npm i --save joi
 
 3. Run RESTAPI on node.js
-$ node index.js
+$ node cloud_plus.js
 
 Client
 1. Make sure that change IP to your IP address
