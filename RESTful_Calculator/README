@@ -13,6 +13,19 @@ $ npm i --save joi
 $ node cloud_plus.js
 
 Client
-1. Make sure that change IP to your IP address
-Mac: ifconfig
-Windows: ipconfig
+1. Make sure that change IP to your server's IP address in code, because android disable "localhost" and "0.0.0.0"
+   Mac: ifconfig
+   Windows: ipconfig
+
+2. http is forbidden by Android 8.0 and later in default setting.
+   if you want to use http request on Android, you should:
+   1) add android:networkSecurityConfig in AndroidManifest.xml
+      <application
+          ...
+          android:networkSecurityConfig="@xml/network_security_config"
+
+   2) xml/network_security_config:
+      <?xml version="1.0" encoding="utf-8"?>
+      <network-security-config>
+          <base-config cleartextTrafficPermitted="true" />
+      </network-security-config>
