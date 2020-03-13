@@ -17,7 +17,7 @@ Client
    Mac: ifconfig
    Windows: ipconfig
 
-2. http is forbidden by Android 8.0 and later in default setting.
+2. If you got a ERR_CLEARTEXT_NOT_PERMITTED, because http is forbidden by Android 8.0 and later in default setting, in order to push switching to https
    if you want to use http request on Android, you should:
    1) add android:networkSecurityConfig in AndroidManifest.xml
       <application
@@ -29,3 +29,10 @@ Client
       <network-security-config>
           <base-config cleartextTrafficPermitted="true" />
       </network-security-config>
+
+issues:
+1. java.net.UnknownHostException: Unable to resolve host
+   chrome in emulator is also unable to access internet
+   possible solution:
+   1) change dns to 8.8.8.8
+   2) COLD BOOT emulator in AVD Manager
